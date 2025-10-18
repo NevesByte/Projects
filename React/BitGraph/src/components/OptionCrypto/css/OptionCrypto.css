@@ -1,49 +1,57 @@
-#containerCarrosslCards{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-top: 25px;
-    width: 100%;
-    position: absolute;
-    bottom: 0;
-    left: 0;
+#containerCarrosslCards {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 25px;
+  width: 100%;
+  position: relative;
+  padding: 10px 0;
 }
 
-
-
-.btnSlides{
-    background-color: white;
-    border: 1px solid black;
-    height: 100%;
-    padding: 15px;
-    box-sizing: border-box;
-    cursor: pointer;
-    margin: 15px;
-
-    transition: all .4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.btnSlides {
+  background-color: white;
+  border: 1px solid black;
+  height: 60px; 
+  width: 40px;
+  box-sizing: border-box;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+  z-index: 5; 
+  position: absolute; 
+  top: 50%;
+  transform: translateY(-50%);
 }
 
-.btnSlides:hover{
-    background-color: rgb(243, 243, 243);
-    transition: all .4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+.btnSlides:first-of-type {
+  left: 10px;
+}
+.btnSlides:last-of-type {
+  right: 10px;
+}
+
+.btnSlides:hover {
+  background-color: rgb(243, 243, 243);
 }
 
 #carrosselCards {
-  background-color: rgb(0, 0, 0);
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.265);
   display: grid;
-  grid-auto-flow: column;       /* Faz os itens fluírem na horizontal */
-  grid-auto-columns: max-content; /* Mantém cada card no tamanho do conteúdo */
-  gap: 40px;                    /* Espaço entre os itens */
+  grid-auto-flow: column;
+  grid-auto-columns: max-content;
+  gap: 40px;
   height: 120px;
   width: 100%;
-  overflow-x: auto;             /* Habilita rolagem horizontal */
+  overflow-x: auto;
   padding: 15px;
-  align-items: center;          /* Alinha verticalmente os itens */
-  scroll-behavior: smooth;      /* Rolagem suave */
-  scrollbar-width: none;        /* Firefox */
-  -ms-overflow-style: none;     /* IE e Edge antigos */
+  align-items: center;
+  scroll-behavior: smooth;
+
+  
+}
+#carrosselCards::-webkit-scrollbar {
+  display: none;
 }

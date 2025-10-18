@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Letreco Modern</title>
+<link rel="stylesheet" href="CSS/style.css">
+<script src="JS/script.js" defer></script>
+</head>
+<body>
+    <header>
+        <div>L</div><div>E</div><div>T</div><div>R</div><div>E</div><div>C</div><div>O</div>
+    </header>
+
+    <main>
+        <section id="container">
+            <div class="chances-text">Chances restantes: <span id="output">5</span></div>
+            <div class="pista-text" id="hint">Dica: _ _ _ _ _</div>
+
+            <div class="rows" id="letterInputs">
+                <input type="text" maxlength="1" class="textInput">
+                <input type="text" maxlength="1" class="textInput">
+                <input type="text" maxlength="1" class="textInput">
+                <input type="text" maxlength="1" class="textInput">
+                <input type="text" maxlength="1" class="textInput">
+            </div>
+
+            <button id="submit">Enviar</button>
+
+            <div id="feedback" class="flex">
+                <div class="bloco green">Acertos: <span id="correct"></span></div>
+                <div class="bloco yellow">Incluídos: <span id="incluso"></span></div>
+                <div class="bloco red">Erros: <span id="erros"></span></div>
+            </div>
+        </section>
+
+        <section class="card" id="winner">
+            <h1>Parabéns!</h1>
+            <p>Você acertou a palavra!</p>
+            <button class="backGame">Jogar novamente</button>
+        </section>
+
+        <section class="card" id="loser">
+            <h1>Que pena!</h1>
+            <p>Palavra correta: <em id="palavraEscolhida"></em></p>
+            <p>Tente novamente</p>
+            <button class="backGame">Jogar novamente</button>
+        </section>
+
+        <div id="content-explicate">
+            <p><i>Advinhe a palavra com base nas dicas. Cada tentativa revela novas pistas. Divirta-se e desafie seu raciocínio!</i></p>
+            <p style="margin-top: 10px; text-align: center; font-weight: bold;">~ Desenvolvido por Victor Neves</p>
+        </div>
+    </main>
+</body>
+</html>

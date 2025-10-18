@@ -45,14 +45,7 @@ function InfoCrypto() {
           </span>
         </div>
       </div>
-
-      {selectedCrypto.description && selectedCrypto.description.en && (
-        <div className="crypto-description">
-          <h2>Descrição</h2>
-          <p>{selectedCrypto.description.en}</p>
-        </div>
-      )}
-    </section>
+      </section>
   );
 }
 

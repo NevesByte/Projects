@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TaskGalaxy</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="./CSS/style.css">
+</head>
+<body>
+<div class="app">
+  <header>
+    <h1>TaskGalaxy</h1>
+    <div class="header-actions">
+      <button id="newTask">Nova Tarefa</button>
+      <input type="text" id="search" placeholder="Pesquisar tarefas...">
+      <select id="sort">
+        <option value="recent">Mais recentes</option>
+        <option value="oldest">Mais antigas</option>
+        <option value="priority">Prioridade</option>
+      </select>
+      <button id="btn-clear">Limpar Tudo</button>
+    </div>
+  </header>
+
+  <aside class="task-form">
+    <h2>Adicionar / Editar Tarefa</h2>
+    <input id="taskTitle" type="text" placeholder="Título">
+    <textarea id="taskContent" placeholder="Descrição da tarefa..."></textarea>
+    <input id="taskTags" type="text" placeholder="Tags (vírgula separadas)">
+    <select id="taskPriority">
+      <option value="">Prioridade</option>
+      <option value="high">Alta</option>
+      <option value="medium">Média</option>
+      <option value="low">Baixa</option>
+    </select>
+    <button id="saveTask">Salvar</button>
+  </aside>
+
+  <section class="task-board">
+    <div class="stats">
+      <span id="count">0</span> tarefas • <span id="tagCount">0</span> tags
+    </div>
+    <div id="grid" class="grid"></div>
+    <div id="empty" class="empty">Nenhuma tarefa ainda 🌌</div>
+  </section>
+</div>
+
+<script src="./Js/script.js"></script>
+</body>
+</html>

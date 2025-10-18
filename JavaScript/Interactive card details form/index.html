@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="CSS/style.css">
+    <script src="JS/script.js" defer></script>
+    <title>Card Details</title>
+</head>
+<body>
+    <main>
+        <section id="container-form">
+            <form id="form" autocomplete="off">
+                <h2>Card Details</h2>
+
+                <div class="field">
+                    <input type="text" id="iname" required placeholder=" ">
+                    <label for="iname">Cardholder Name</label>
+                    <small class="error">Name cannot be blank</small>
+                </div>
+
+                <div class="field">
+                    <input type="text" id="icard" maxlength="19" placeholder=" ">
+                    <label for="icard">Card Number</label>
+                    <small class="error">Invalid card number</small>
+                </div>
+
+                <div class="row">
+                    <div class="field short">
+                        <input type="text" id="month" maxlength="2" placeholder=" ">
+                        <label for="month">MM</label>
+                        <small class="error">Invalid month</small>
+                    </div>
+
+                    <div class="field short">
+                        <input type="text" id="year" maxlength="2" placeholder=" ">
+                        <label for="year">YY</label>
+                        <small class="error">Invalid year</small>
+                    </div>
+
+                    <div class="field short">
+                        <input type="text" id="icvc" maxlength="3" placeholder=" ">
+                        <label for="icvc">CVC</label>
+                        <small class="error">Invalid CVC</small>
+                    </div>
+                </div>
+
+                <button type="button" id="submit">Confirm</button>
+            </form>
+
+            <section id="success">
+                <svg width="80" height="80" viewBox="0 0 24 24" fill="none">
+                    <circle cx="12" cy="12" r="12" fill="#4BB543"/>
+                    <path d="M6 12l4 4 8-8" stroke="white" stroke-width="2"/>
+                </svg>
+                <h2>Thank you!</h2>
+                <p>Your card details have been added</p>
+                <button id="continue">
+                    <a href="index.html">Continue</a>
+                </button>
+            </section>
+        </section>
+    </main>
+</body>
+</html>

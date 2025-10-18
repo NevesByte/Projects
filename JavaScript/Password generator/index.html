@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="css/style.css" />
+  <script src="js/script.js" defer></script>
+  <title>Gerador de Senha</title>
+</head>
+<body>
+  <main id="container">
+    <header id="title">
+      <h1>Gerador de Senha</h1>
+    </header>
+
+    <section class="content">
+      <div class="row space contentFirst">
+        <h2 id="output">Senha</h2>
+        <button id="copy">Copiar</button>
+      </div>
+    </section>
+
+    <section class="content">
+      <div class="row campos space">
+        <label for="lengthSenha">Tamanho da Senha</label>
+        <span id="outputValue">13</span>
+      </div>
+      <input type="range" id="lengthSenha" min="5" max="20" value="13" />
+
+      <div class="campos container-opt">
+        <div class="opt"><input type="checkbox" id="iUp" /><label for="iUp">Letras Maiúsculas</label></div>
+        <div class="opt"><input type="checkbox" id="iLow" /><label for="iLow">Letras Minúsculas</label></div>
+        <div class="opt"><input type="checkbox" id="iNum" /><label for="iNum">Números</label></div>
+        <div class="opt"><input type="checkbox" id="iSimbol" /><label for="iSimbol">Símbolos</label></div>
+      </div>
+
+      <div class="strength row campos space">
+        <h2 id="output-seguranca">Força</h2>
+        <div class="row space levels">
+          <div class="level"></div>
+          <div class="level"></div>
+          <div class="level"></div>
+          <div class="level"></div>
+        </div>
+      </div>
+
+      <button id="submit">Gerar Senha</button>
+    </section>
+  </main>
+</body>
+</html>

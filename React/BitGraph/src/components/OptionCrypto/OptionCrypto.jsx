@@ -26,19 +26,20 @@ function OptionCrypto() {
     };
 
   return (
-    <section id="containerCarrosslCards">
-      <button className="btnSlides" onClick={scrollLeft}>
+    <>
+      
+      <section id="containerCarrosslCards">
+        <button className="btnSlides" onClick={scrollLeft}>
         <span className="material-symbols-outlined">arrow_back</span>
       </button>
-
-      <div id="carrosselCards" ref={carrosselRef}>
-        <CardCrypto />
-      </div>
-
-      <button className="btnSlides" onClick={scrollRight}>
+        <div id="carrosselCards" ref={carrosselRef}>
+          <CardCrypto />
+        </div>
+        <button className="btnSlides" onClick={scrollRight}>
         <span className="material-symbols-outlined">arrow_forward</span>
       </button>
-    </section>
+      </section>
+    </>
   );
 }
 

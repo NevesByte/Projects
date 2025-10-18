@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Caderno Virtual</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="./CSS/style.css">
+
+  <link rel="icon" href="./favicon.ico" type="image/x-icon">
+</head>
+
+<body>
+  <div class="app">
+    <header class="app-header">
+      <div class="brand">
+        <div class="logo">CV</div>
+        <div>
+          <h1>Caderno Virtual — Modernizado</h1>
+          <div class="muted small">Rápido, responsivo e com salvamento local</div>
+        </div>
+      </div>
+
+      <div class="header-actions">
+        <button class="ghost" id="btn-export" title="Exportar anotações">Exportar</button>
+        <button class="ghost" id="btn-import" title="Importar anotações">Importar</button>
+        <button class="ghost" id="btn-clear" title="Excluir todas as anotações">Limpar tudo</button>
+      </div>
+    </header>
+    <aside class="sidebar">
+      <div class="field">
+        <label for="title">Título</label>
+        <input id="title" type="text" placeholder="Título da anotação" />
+      </div>
+
+      <div class="field">
+        <label for="content">Anotação</label>
+        <textarea id="content" placeholder="Digite aqui... (suporta múltiplas linhas)"></textarea>
+      </div>
+
+      <div class="field row">
+        <input id="tagInput" type="text" placeholder="Adicionar tags (separe por vírgula)" />
+        <select id="colorSelect" title="Escolher cor">
+          <option value="">Tema</option>
+          <option value="#7c3aed">Púrpura</option>
+          <option value="#06b6d4">Ciano</option>
+          <option value="#ef4444">Vermelho</option>
+          <option value="#10b981">Verde</option>
+        </select>
+      </div>
+
+      <div class="field row">
+        <button id="saveBtn" class="primary">Criar / Atualizar</button>
+        <button id="newBtn" class="ghost">Novo</button>
+      </div>
+
+      <div class="field">
+        <div class="muted small">Atalhos: <b>Ctrl+N</b> = novo, <b>Ctrl+S</b> = salvar, <b>/</b> = pesquisa</div>
+      </div>
+
+      <div style="margin-top:10px;border-top:1px solid rgba(255,255,255,0.03);padding-top:12px">
+        <div class="muted small">📊 Estatísticas</div>
+        <div id="stats" class="muted small">Carregando...</div>
+      </div>
+    </aside>
+    <section class="notes-area">
+      <div class="toolbar">
+        <div class="controls">
+          <input id="search" class="search" placeholder="Pesquisar (título, texto ou tag)" />
+          <select id="sort" class="ghost">
+            <option value="recent">Mais recentes</option>
+            <option value="oldest">Mais antigos</option>
+            <option value="title">A-Z</option>
+          </select>
+        </div>
+        <div class="muted small">Você tem <span id="count">0</span> anotações</div>
+      </div>
+
+      <div id="grid" class="grid"></div>
+      <div id="empty" class="empty">Nenhuma anotação ainda — crie uma à esquerda ✨</div>
+    </section>
+  </div>
+  <div id="modal" class="modal" role="dialog" aria-modal="true">
+    <div class="modal-card">
+      <h3 id="modalTitle">Exportar</h3>
+      <div style="margin-top:8px">
+        <textarea id="modalArea" style="width:100%;min-height:160px;background:#07112a;border-radius:8px;padding:10px;color:var(--muted);border:0"></textarea>
+      </div>
+      <div style="margin-top:10px;text-align:right">
+        <button class="ghost" id="modalClose">Fechar</button>
+        <button class="primary" id="modalDownload">Baixar JSON</button>
+      </div>
+    </div>
+  </div>
+  <script src="./JS/script.js" defer></script>
+</body>
+</html>
